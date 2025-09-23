@@ -10,7 +10,7 @@ export default function AddTodo() {
 
 
     function handleClick(){
-        dispatch(addTodo({name:name}));
+        dispatch(addTodo({namanya:name}));
         navigate("/todolist");
     }
 

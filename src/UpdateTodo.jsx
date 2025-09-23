@@ -5,7 +5,7 @@ import {getTodo, updateTodo} from "./todoListSlice.js";
 
 export default function UpdateTodo() {
     const params = useParams();
-    const todo = useSelector(state => getTodo(state, Number(params.id)))
+    const todo = useSelector(state => getTodo(state, Number(params.kodeIDs)))
     const [name, setName] = useState(todo.name);
     const dispatch = useDispatch();
     const navigate = useNavigate();

@@ -4,8 +4,8 @@ import {removeTodo} from "./todoListSlice.js";
 
 export default function ListTodo() {
     const todos = useSelector(state => {
-        return state.todoList;
-    });
+        return state.todoList; //ini mengakses store yang ada di main.jsx
+    }); //konfigurasinya menggunakan configureStore()
     const dispatch = useDispatch();
 
     return (
@@ -26,7 +26,7 @@ export default function ListTodo() {
                         <td>{todo.id}</td>
                         <td>{todo.name}</td>
                         <td>
-                            <Link to={`/todolist/update/${todo.id}`}>Update</Link>
+                            <Link to={`/todolist/update/${todo.id}/rahasia`}>Update</Link>
                             <button onClick={() => dispatch(removeTodo({id: todo.id}))}>Delete</button>
                         </td>
                     </tr>
